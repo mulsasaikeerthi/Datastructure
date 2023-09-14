@@ -49,3 +49,17 @@ class Solution {
     
     }
 }
+
+class Solution {
+
+    void printReverseNumberTriangle(int n) {
+for(int i=n;i>0;i--){
+    int count=0;
+            for(int j=0;j<i;j++){
+                count++;
+                System.out.print(count+" ");
+            }
+            System.out.println();
+        }   
+        }
+}
