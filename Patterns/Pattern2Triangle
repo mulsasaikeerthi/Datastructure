@@ -118,6 +118,7 @@ for(int i=n;i>0;i--){
     }
 }
 
+Patteren10:
 class Solution {
 
     void printTriangle(int n) {
@@ -135,7 +136,38 @@ class Solution {
         }
     }
 }
+or
+Patteren10:
+class Solution {
 
+    void printTriangle(int n) {
+        for(int i=0;i<2*n-1;i++){
+            for(int j=0; j<=i && i<n;j++){
+                System.out.print("* ");
+            }
+            for(int k=n-1;k>i-n && i>=n;k--){
+                System.out.print("* ");
+            }
+                        System.out.println();
+        }
+    }
+}
+or Patteren10
+class Solution {
+
+    void printTriangle(int n) {
+        for(int i=0;i<2*n-1;i++){
+            int stars=i;
+            if(i>=n){
+                stars=2*(n-1)-i;
+            }
+            for(int j=0;j<=stars;j++){
+                System.out.print("* ");
+            }
+            System.out.println();
+        }
+    }
+}
 class Solution {
 
     void printTriangle(int n) {
@@ -163,6 +195,28 @@ class Solution {
         }
     }
 }
+Patteren11:
+or
+class Solution {
+
+    void printTriangle(int n) {
+        int start=1;
+        for(int i=0;i<n;i++){
+            if(i%2==0){
+                start=1;
+            }
+            else {
+                start=0;
+            }
+            
+            for(int j=0;j<=i;j++){
+              System.out.print(start+" ");
+              start=1-start;
+            }
+            System.out.println();
+        }
+    }
+}
 
 class Solution {
 
@@ -202,6 +256,179 @@ class Solution {
             for(int k=0;k<=i;k++){
               System.out.print(count+" ");
                               count--;
+            }
+            System.out.println();
+        }
+    }
+}
+class Solution {
+
+    void printTriangle(int n) {
+for(int i=0;i<n;i++){
+                char ch='A';
+    int asciiValue=ch;
+    for(int j=0;j<=i;j++){
+        ch=(char)asciiValue;
+        System.out.print(ch);
+        asciiValue++;
+    }
+    System.out.println();
+}   
+}
+}
+
+class Solution {
+
+    void printTriangle(int n) {
+        for(int i=0;i<n;i++){
+            char ch='A';
+            int asciiValue=ch;
+            for(int j=n;j>i;j--){
+                ch=(char)asciiValue;
+                System.out.print(ch);
+                asciiValue++;
+            }
+            System.out.println();
+        }
+    }
+}
+    void printTriangle(int n) {
+        char ch='A';
+        int asciiValue=ch;
+        for(int i=0;i<n;i++){
+            for(int j=0;j<=i;j++){
+                ch=(char)asciiValue;
+                System.out.print(ch);
+            }
+            asciiValue++;
+            System.out.println();
+        }
+    }
+}
+class Solution {
+
+    void printTriangle(int n) {
+        char ch='A';
+        for(int i=0;i<n;i++){
+            int asciiValue=ch;
+            for(int j=0;j<n-i-1;j++){
+                System.out.print(" ");
+            }
+            for(int k=0;k<=i;k++){
+                ch=(char)asciiValue;
+                System.out.print(ch);
+                asciiValue++;
+            }
+            asciiValue--;
+            for(int j=0;j<i;j++){
+                asciiValue--;
+                ch=(char)asciiValue;
+                System.out.print(ch);
+            }
+            System.out.println();
+        }
+    }
+}
+
+class Solution {
+
+    void printTriangle(int n) {
+        for(int i=0;i<n;i++){
+            char ch='A';
+            int asciiValue=ch+n-1;
+            for(int j=0;j<=i;j++){
+                ch=(char)asciiValue;
+                System.out.print(ch+" ");
+                asciiValue--;
+            }
+            System.out.println();
+        }
+    }
+}
+
+
+class Solution {
+
+    void printTriangle(int n) {
+        for(int i=0;i<n;i++){
+            for(int j=0;j<n-i;j++){
+                System.out.print("*");
+            }
+            for(int k=0;k<2*i;k++){
+                System.out.print(" ");
+            }
+            for(int j=0;j<n-i;j++){
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+        for(int i=0;i<n;i++){
+            for(int j=0;j<=i;j++){
+                System.out.print("*");
+            }
+            for(int k=0;k<2*(n-i-1);k++){
+                System.out.print(" ");
+            }
+            for(int j=0;j<=i;j++){
+                System.out.print("*");
+            }
+            
+            System.out.println();
+        }
+    }
+}
+
+class Solution {
+
+    void printTriangle(int n) {
+        for(int i=0;i<2*n-1;i++){
+            int space=2*(n-i-1);
+            int star=i;
+            if(i>=n){
+                space=2*(i-n+1);
+                star=2*(n-1)-(i);
+            }
+            for(int j=0;j<=star;j++){
+                System.out.print("*");
+            }
+            for(int k=0;k<space;k++){
+                System.out.print(" ");
+            }
+            for(int j=0;j<=star;j++){
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+    }
+}
+class Solution {
+
+    void printSquare(int n) {
+        for(int i=0;i<n;i++){
+            for(int j=0;j<n;j++){
+                if(n-1==i||i==0||j==0||j==n-1){
+                    System.out.print("*");
+                }
+                else{
+                    System.out.print(" ");
+                }
+            }
+            System.out.println();
+        }
+    }
+}
+
+
+class Solution {
+
+    void printSquare(int n) {
+        for(int i=0;i<2*n-1;i++){
+            for(int j=0;j<2*n-1;j++){
+                int top=i;
+                int left=j;
+                int bottom=2*(n-1)-i;
+                int right=2*(n-1)-j;
+                System.out.print(n-Math.min(Math.min(top,bottom),Math.min(left,right))+" ");
             }
             System.out.println();
         }
